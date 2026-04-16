@@ -1,0 +1,61 @@
+export const caseStudies = [
+  {
+    id: 1,
+    bg: "bg-[#ffffff]",
+    image: "/images/case-studies/case-study-1.svg",
+    imagePosition: "right",
+    tags: [
+      { label: "User Retention", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+      { label: "Mobile App", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+      { label: "Fintech", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+    ],
+    title: "Case Study 01 — High Performance Mobile App",
+    titleColor: "text-[#131313]",
+    titleFont: "font-h2 font-[number:var(--h2-font-weight)] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]",
+    stats: [
+      { value: "-42%", label: "App Load Time", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+      { value: "2.6M+", label: "Monthly Active Users", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+      { value: "+58%", label: "User Retention", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+    ],
+    borderColor: "border-[#b1b1b1]",
+  },
+  {
+    id: 2,
+    bg: "bg-white",
+    image: "/images/case-studies/case-study-2.svg",
+    imagePosition: "left",
+    tags: [
+      { label: "Multichannel Integration", dotColor: "bg-[#229990]", borderColor: "border-[#0f4642]", textColor: "text-[#229990]" },
+      { label: "Knowledge Base Engineering", dotColor: "bg-[#229990]", borderColor: "border-[#0f4642]", textColor: "text-[#229990]" },
+    ],
+    title: "Case Study 02 — Keyword Rankings Improvement Search Engines",
+    titleColor: "text-[#229990]",
+    titleFont: "font-h2 font-[number:var(--h2-font-weight)] text-[length:var(--h2-font-size)] tracking-[var(--h2-letter-spacing)] leading-[var(--h2-line-height)] [font-style:var(--h2-font-style)]",
+    stats: [
+      { value: "64%", label: "Organic Traffic", valueColor: "text-[#229990]", labelColor: "text-[#197069]" },
+      { value: "40%", label: "Leads Generated", valueColor: "text-[#229990]", labelColor: "text-[#197069]" },
+      { value: "24/7", label: "Uptime Fast Speed", valueColor: "text-[#229990]", labelColor: "text-[#197069]" },
+    ],
+    borderColor: "border-[#b1b1b1]",
+  },
+  {
+    id: 3,
+    bg: "bg-[#ffffff]",
+    image: "/images/case-studies/case-study-3.svg",
+    imagePosition: "right",
+    tags: [
+      { label: "User Retention", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+      { label: "Mobile App", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+      { label: "Fintech", dotColor: "bg-[#1d1d1d]", borderColor: "border-[#b9b9b9]", textColor: "text-[#1d1d1d]" },
+    ],
+    title: "Case Study 03 — AI Agent Automation Impact",
+    titleColor: "text-[#131313]",
+    titleFont: "[font-family:'Inter_Display-Regular',Helvetica] font-normal text-[38px] tracking-[-0.38px] leading-[normal]",
+    stats: [
+      { value: "-71%", label: "Support Response", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+      { value: "94%", label: "Automation Accuracy", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+      { value: "38%", label: "Cost Reduction", valueColor: "text-[#131313]", labelColor: "text-[#939393]" },
+    ],
+    borderColor: "border-[#b1b1b1]",
+  },
+];
