@@ -6,7 +6,7 @@ import { caseStudies } from "@/data/case-studies";
 function CaseStudyCard({ study }) {
   const imageBlock = (
     <div
-      className="relative w-full md:w-[400px] lg:w-[754px] h-[250px] md:h-[400px] lg:h-[596px] rounded-2xl overflow-hidden bg-cover bg-center flex-shrink-0"
+      className="relative w-full md:w-[400px] lg:w-[634px] h-[250px] md:h-[400px] lg:h-[596px] rounded-2xl overflow-hidden bg-cover bg-center flex-shrink-0"
       style={{ backgroundImage: `url(${study.image})` }}
     />
   );
@@ -81,7 +81,7 @@ function CaseStudyCard({ study }) {
 
 export function CaseStudiesSection() {
   return (
-    <section className="flex flex-col items-center relative w-full">
+    <section className="flex flex-col items-center container gap-4 relative w-full">
       {/* Header */}
       <div className="inline-flex flex-col items-center justify-center gap-2.5 pt-10 pb-0 px-0 relative flex-[0_0_auto]">
         <SectionBadge label="Case Studies" />

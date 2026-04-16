@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -15,14 +15,31 @@ import { PrimaryButton } from "../ui/primary-button";
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY.current && currentScrollY > 50) {
+        setMinimized(true);
+      } else {
+        setMinimized(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-[10px] backdrop-brightness-100">
-      <div className="flex w-full items-center justify-between px-6 md:px-12 lg:px-40 py-4 lg:py-5">
+    <header className={`fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-[10px] backdrop-brightness-100 transition-all duration-300 ease-in-out ${minimized ? "shadow-lg" : ""}`}>
+      <div className={`flex w-full items-center justify-between px-6 md:px-12 lg:px-40 transition-all duration-300 ease-in-out ${minimized ? "py-2 lg:py-2" : "py-4 lg:py-5"}`}>
         {/* Logo */}
         <Link href="/" className="shrink-0">
           <Image
-            className="w-[130px] h-[38px] lg:w-[169px] lg:h-[50px]"
+            className={`transition-all duration-300 ease-in-out ${minimized ? "w-[100px] h-[29px] lg:w-[130px] lg:h-[38px]" : "w-[130px] h-[38px] lg:w-[169px] lg:h-[50px]"}`}
             alt="Apex Web Studios"
             src="/images/app-logo.svg"
             width={169}
@@ -58,7 +75,7 @@ export function Header() {
             </span>
           </div>
 
-          <div className="relative h-[74px] bg-[#00000033] rounded-[63.78px] overflow-hidden cursor-pointer">
+          <div className={`relative bg-[#00000033] rounded-[63.78px] overflow-hidden cursor-pointer transition-all duration-300 ease-in-out ${minimized ? "h-[54px]" : "h-[74px]"}`}>
             <PrimaryButton className="absolute inset-0 w-full h-full rounded-[63.78px] flex items-center justify-center">
               View Our Work
             </PrimaryButton>

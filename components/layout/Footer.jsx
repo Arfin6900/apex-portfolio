@@ -148,7 +148,7 @@ export function Footer() {
               <Image
                 className="flex-[0_0_auto]"
                 alt="Social media"
-                src="/images/placeholder-icon.svg"
+                src="/images/apex-logo.svg"
                 width={120}
                 height={24}
               />
